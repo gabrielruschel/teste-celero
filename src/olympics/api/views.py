@@ -2,7 +2,7 @@ from rest_framework import generics
 from olympics.models import Athlete,Event
 from .serializers import AthleteSerializer,EventSerializer
 
-class AthleteCreateView(generics.ListCreateAPIView):
+class AthleteListCreateView(generics.ListCreateAPIView):
 
     lookup_field = 'pk'
     serializer_class = AthleteSerializer
@@ -31,3 +31,15 @@ class EventRudView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         return Event.objects.all()
+
+class EventListCreateView(generics.ListCreateAPIView):
+
+    lookup_field = 'pk'
+    serializer_class = EventSerializer
+    # queryset = Athlete.objects.all()
+
+    def get_queryset(self):
+        return Event.objects.all()
+
+    def perform_create(self,serializer):
+        serializer.save()
