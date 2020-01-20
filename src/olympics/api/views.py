@@ -2,7 +2,7 @@ from rest_framework import generics
 from olympics.models import Athlete
 from .serializers import AthleteSerializer
 
-class AthleteCreateView(generics.CreateAPIView):
+class AthleteCreateView(generics.ListCreateAPIView):
 
     lookup_field = 'pk'
     serializer_class = AthleteSerializer
