@@ -44,7 +44,7 @@ def populate_events():
         for row in csv.DictReader(rows, delimiter=","):
 
             atl_id = int(row['ID'])
-            ev = Event(athlete_id=atl_id, team=row['Team'],noc=row['NOC'],games=row['Team'],year=row['Year'],season=row['Season'],city=row['City'],sport=row['Sport'],event=row['Event'],medal=row['Medal'])
+            ev = Event(athlete_id=atl_id, team=row['Team'],noc=row['NOC'],games=row['Games'],year=row['Year'],season=row['Season'],city=row['City'],sport=row['Sport'],event=row['Event'],medal=row['Medal'])
             obj_list.append(ev)
 
     try:
