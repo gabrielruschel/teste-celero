@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Athlete(models.Model):
-    athlete_id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=60)
     sex = models.CharField(max_length=1)
     age = models.CharField(max_length=4)
@@ -13,8 +13,8 @@ class Athlete(models.Model):
         return str(self.name)
 
 class Event(models.Model):
-    event_id = models.AutoField(primary_key=True)
-    athlete = models.ForeignKey(Athlete, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
+    athlete = models.ForeignKey(Athlete, related_name='event_athlete', on_delete=models.CASCADE)
     team = models.CharField(max_length=35)
     noc = models.CharField(max_length=4)
     games = models.CharField(max_length=25)
