@@ -24,3 +24,6 @@ class Event(models.Model):
     sport = models.CharField(max_length=35)
     event = models.CharField(max_length=80)
     medal = models.CharField(max_length=10)
+
+    def __str__(self):
+        return str(self.games + " - " + self.event)
