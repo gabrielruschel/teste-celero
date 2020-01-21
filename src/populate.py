@@ -24,7 +24,7 @@ def populate_athletes():
                 continue
 
             last_id = int(row['ID'])
-            atl = Athlete(athlete_id=int(row['ID']),name=row['Name'],sex=row['Sex'],age=row['Age'],height=row['Height'],weight=row['Weight'])
+            atl = Athlete(id=int(row['ID']),name=row['Name'],sex=row['Sex'],age=row['Age'],height=row['Height'],weight=row['Weight'])
             obj_list.append(atl)
 
     try:
