@@ -21,6 +21,7 @@ class EventSerializer(serializers.ModelSerializer):
 
 
 class AthleteSerializer(serializers.ModelSerializer):
+    # variable to store and show in the serializer all the events associated with the athlete
     athlete_event = EventSerializer(source="event_athlete",many=True,read_only=True)
     class Meta:
         model = Athlete

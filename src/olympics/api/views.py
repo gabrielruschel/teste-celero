@@ -4,8 +4,7 @@ from .serializers import AthleteSerializer,EventSerializer
 
 class AthleteListCreateView(generics.ListCreateAPIView):
     """
-    View function for the Athlete endpoint that provides
-    the List and Create functions for the model
+    View for the Athlete endpoint that provides the List and Create functions for the Athlete model
     """
 
     lookup_field = 'pk'
@@ -36,8 +35,7 @@ class AthleteListCreateView(generics.ListCreateAPIView):
 
 class AthleteRudView(generics.RetrieveUpdateDestroyAPIView):
     """
-    View function for the Athlete endpoint that provides
-    the Retrieve, Update and Destroy functions for the model
+    View for the Athlete endpoint that provide the Retrieve, Update and Destroy functions for the Athlete model
     """
 
     lookup_field = 'pk'
@@ -49,8 +47,7 @@ class AthleteRudView(generics.RetrieveUpdateDestroyAPIView):
 
 class EventRudView(generics.RetrieveUpdateDestroyAPIView):
     """
-    View function for the Event endpoint that provides
-    the Retrieve, Update and Destroy functions for the model
+    View for the Event endpoint that provides the Retrieve, Update and Destroy functions for the Event model
     """
 
     lookup_field = 'pk'
@@ -61,8 +58,7 @@ class EventRudView(generics.RetrieveUpdateDestroyAPIView):
 
 class EventListCreateView(generics.ListCreateAPIView):
     """
-    View function for the Event endpoint that provides
-    the List and Create functions for the model
+    View for the Event endpoint that provides the List and Create functions for the Event model
     """
 
     lookup_field = 'pk'
