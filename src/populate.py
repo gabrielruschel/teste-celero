@@ -9,6 +9,7 @@ django.setup()
 from olympics.models import Athlete, Event
 
 def populate_athletes():
+    """ Function that populates the Athlete model """
 
     last_id = 0
     obj_list = []
@@ -33,6 +34,7 @@ def populate_athletes():
         print(e)
 
 def populate_events():
+    """ Function that populates the Event model """
     obj_list = []
 
     print("")
